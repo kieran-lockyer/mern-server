@@ -3,6 +3,6 @@
 
 .env
 
-db/samplePhotoData.json
+db/sampleImageData.json
 db/sampleTagData.json
 db/sampleClientData.json
