@@ -11,9 +11,12 @@ mongoose.connect(dbConn, (err) => {
     }
 })
 
+app.use('/photos', require('./routes/photos'))
+app.use('/tags', require('./routes/tags'))
+app.use('/clients', require('./routes/clients'))
+
 app.get('/', (req, res) => {
-    res.send("Hey there good lookin'")
+    res.status(200).send("Hey there good lookin'")
 })
 
-
-app.listen(3000, () => console.log('App listening on port 3000!'))
+app.listen(3001, () => console.log('App listening on port 3001!'))
