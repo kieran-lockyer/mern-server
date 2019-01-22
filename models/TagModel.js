@@ -1,9 +1,11 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const tagSchema = mongoose.Schema({
-    name: String,
-    photos: [{ type: Schema.Types.ObjectId, ref: 'Photo' }],
-    datetime: Date,
+    tag: String,
+    confidence: Number,
+    imageId: { type: Schema.Types.ObjectId, ref: 'Photo' },
+    dateAdded: Date
 })
 
 module.exports = mongoose.model('Tag', tagSchema)
