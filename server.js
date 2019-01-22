@@ -16,7 +16,7 @@ app.use('/tags', require('./routes/tags'))
 app.use('/clients', require('./routes/clients'))
 
 app.get('/', (req, res) => {
-    res.status(200).send("Hey there good lookin'")
+    res.status(200).send("Sortal Dashboard")
 })
 
 const PORT = process.env.PORT || 3001
