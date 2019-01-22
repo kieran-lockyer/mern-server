@@ -4,6 +4,7 @@
   "description": "Everything express server related goes here.",
   "main": "server.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "mongoose": "^5.4.5"

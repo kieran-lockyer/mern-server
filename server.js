@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const dbConn = require('./db')
 const mongoose = require('mongoose')
+const cors = require('cors')
+
+app.use(cors())
 
 mongoose.connect(dbConn, (err) => {
     if (err) {
