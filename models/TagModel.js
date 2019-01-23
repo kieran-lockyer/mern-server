@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const tagSchema = mongoose.Schema({
     tag: String,
     confidence: Number,
-    imageId: { type: Schema.Types.ObjectId, ref: 'Photo' },
+    images: [{ type: Schema.Types.ObjectId, ref: 'Photo' }],
     dateAdded: Date
 })
 
