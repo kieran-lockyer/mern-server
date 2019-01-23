@@ -3,7 +3,11 @@ const router = express.Router();
 const Clients = require('../models/ClientModel')
 
 router.get('/', (req, res) => {
-    Clients.find().then(
+    const options = {
+        page: req.query.pageNo,
+        limit: 10
+    }
+    Clients.paginate({}, options).then(
         clients => res.json(clients)
     ).catch(
         error => res.status(500).json({

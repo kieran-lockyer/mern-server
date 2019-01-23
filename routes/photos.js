@@ -2,8 +2,13 @@ const express = require('express');
 const router = express.Router();
 const Photos = require('../models/PhotoModel')
 
+
 router.get('/', (req, res) => {
-    Photos.find().then(
+    const options = {
+        page: req.query.pageNo,
+        limit: 10
+    }
+    Photos.paginate({}, options).then(
         photos => res.json(photos)
     ).catch(
         error => res.status(500).json({
