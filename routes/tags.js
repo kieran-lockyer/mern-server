@@ -1,20 +1,41 @@
 const express = require("express");
 const router = express.Router();
 const Tags = require("../models/TagModel");
+const Photos = require("../models/PhotoModel");
 
 router.get("/", (req, res) => {
   const options = {
     page: req.query.pageNo,
     limit: 10
-  }
-  Tags.paginate({}, options).then(
-    tags => res.json(tags)
-  ).catch(
-    error => res.status(500).json({
-      error: error.message
-    })
-  )
-})
+  };
+  Tags.paginate({}, options)
+    .then(tags => res.json(tags))
+    .catch(error =>
+      res.status(500).json({
+        error: error.message
+      })
+    );
+});
+
+router.get("/:tag", (req, res) => {
+  Tags.find({ tag: req.params.tag })
+    .then(tag => res.json(tag))
+    .catch(error =>
+      res.status(500).json({
+        error: error.message
+      })
+    );
+});
+
+router.get("/:tag/images", (req, res) => {
+  Photos.find({ "metadata.tag": req.params.tag })
+    .then(tag => res.json(tag))
+    .catch(error =>
+      res.status(500).json({
+        error: error.message
+      })
+    );
+});
 
 router.delete("/:id", (req, res) => {
   Tags.findByIdAndRemove(req.params.id)
