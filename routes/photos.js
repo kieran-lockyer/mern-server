@@ -27,6 +27,10 @@ router.get("/:_id", (req, res) => {
         );
 });
 
+router.get("/image/:_id", (req, res) => {
+    res.sendFile(`../db/images/${req.params._id}`)
+})
+
 router.delete('/:id', (req, res) => {
     Photos.findByIdAndRemove(req.params.id).then(
         () => res.send(204)
