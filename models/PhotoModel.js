@@ -2,12 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const mongoosePaginate = require('mongoose-paginate-v2')
 
-
 const photoSchema = new Schema({
-    url: String,
-    client: { type: Schema.Types.ObjectId, ref: 'Client' },
-    datetime: Date,
-    metadata: Array
+    _id: String,
+    tags: Array,
+    dateAdded: Date
 })
 
 photoSchema.plugin(mongoosePaginate)
