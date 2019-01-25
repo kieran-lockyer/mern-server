@@ -27,6 +27,26 @@ router.get("/:_id", (req, res) => {
         );
 });
 
+router.get("/tag/:label", (req, res) => {
+    console.log(req.params.label)
+    Photos.find({
+        tags:
+        {
+            $elemMatch:
+            {
+                label: {
+                    $regex: `.*${req.params.label}.*`
+                }
+            }
+        }
+    })
+        .then(photos => {
+            console.log(photos)
+            res.json(photos)
+        })
+        .catch(err => console.log(err))
+})
+
 router.get("/image/:_id", (req, res) => {
     res.sendFile(process.cwd() + `/db/images/${req.params._id}`)
 })
