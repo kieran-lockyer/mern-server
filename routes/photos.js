@@ -29,16 +29,14 @@ router.get("/:_id", (req, res) => {
 
 router.get("/tag/:label", (req, res) => {
     console.log(req.params.label)
+    let tags = req.params.label.split(',')
+    console.log(tags)
+    tags = tags.map(tag => {
+        return { tags: { $elemMatch: { label: { $regex: `.*${tag}.*` } } } }
+    })
+    console.log(tags)
     Photos.find({
-        tags:
-        {
-            $elemMatch:
-            {
-                label: {
-                    $regex: `.*${req.params.label}.*`
-                }
-            }
-        }
+        $and: tags
     })
         .then(photos => {
             console.log(photos)
