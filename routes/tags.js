@@ -27,6 +27,15 @@ router.get("/:_id", (req, res) => {
     )
 })
 
+router.get("/filter/:label", (req, res) => {
+  Tags.find({ label: { $regex: `.*${req.params.label}.*` } })
+    .then(tags => {
+      console.log(tags)
+      res.json(tags)
+    })
+    .catch(err => console.log(err))
+})
+
 router.get("/stats/:n", async (req, res) => {
   const result = []
   for (let n = req.params.n; n >= 0; n--) {
