@@ -1,13 +1,16 @@
-const express = require("express");
-const router = express.Router();
-const Tags = require("../models/TagModel");
-const Photos = require("../models/PhotoModel");
+const express = require("express")
+const router = express.Router()
+const Tags = require("../models/TagModel")
+const Photos = require("../models/PhotoModel")
 
 router.get("/", (req, res) => {
+  const field = req.query.field
   const options = {
     page: req.query.pageNo,
-    limit: 10
-  };
+    limit: parseInt(req.query.limit)
+  }
+  options['sort'] = {}
+  options.sort[field] = req.query.order
   Tags.paginate({}, options)
     .then(tags => res.json(tags))
     .catch(error =>
@@ -85,4 +88,4 @@ router.delete("/:_id", (req, res) => {
     )
 })
 
-module.exports = router;
+module.exports = router
