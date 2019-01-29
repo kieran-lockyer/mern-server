@@ -1,13 +1,15 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 const Photos = require('../models/PhotoModel')
 
 
 router.get('/', (req, res) => {
     const options = {
         page: req.query.pageNo,
-        limit: 30
+        limit: parseInt(req.query.limit)
     }
+    options['sort'] = {}
+    options.sort[req.query.field] = req.query.order
     Photos.paginate({}, options).then(
         photos => res.json(photos)
     ).catch(
@@ -24,8 +26,8 @@ router.get("/:_id", (req, res) => {
             res.status(500).json({
                 error: error.message
             })
-        );
-});
+        )
+})
 
 router.get("/tag/:label", (req, res) => {
     console.log(req.params.label)
