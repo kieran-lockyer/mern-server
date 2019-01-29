@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 const Clients = require('../models/ClientModel')
 
 router.get('/', (req, res) => {
