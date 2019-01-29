@@ -4,20 +4,23 @@ const Tags = require("../models/TagModel")
 const Photos = require("../models/PhotoModel")
 
 router.get("/", (req, res) => {
-  const field = req.query.field
   const options = {
     page: req.query.pageNo,
     limit: parseInt(req.query.limit)
   }
   options['sort'] = {}
-  options.sort[field] = req.query.order
-  Tags.paginate({}, options)
-    .then(tags => res.json(tags))
-    .catch(error =>
-      res.status(500).json({
-        error: error.message
-      })
-    )
+  options.sort[req.query.field] = req.query.order
+  let filter
+  if (req.query.label) {
+    filter = { label: { $regex: `.*${req.query.label}.*` } }
+  }
+  Tags.paginate(filter, options).then(
+    photos => res.json(photos)
+  ).catch(
+    error => res.status(500).json({
+      error: error.message
+    })
+  )
 })
 
 router.get("/:_id", (req, res) => {
@@ -31,7 +34,7 @@ router.get("/:_id", (req, res) => {
 })
 
 router.get("/filter/:label", (req, res) => {
-  Tags.find({ label: { $regex: `.*${req.params.label}.*` } })
+  Tags.find()
     .then(tags => {
       console.log(tags)
       res.json(tags)

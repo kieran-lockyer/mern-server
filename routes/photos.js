@@ -3,14 +3,22 @@ const router = express.Router()
 const Photos = require('../models/PhotoModel')
 
 
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
     const options = {
         page: req.query.pageNo,
         limit: parseInt(req.query.limit)
     }
     options['sort'] = {}
     options.sort[req.query.field] = req.query.order
-    Photos.paginate({}, options).then(
+    let filter
+    if (req.query.tags) {
+        let tags = req.query.tags.split(',')
+        tags = tags.map(tag => {
+            return { tags: { $elemMatch: { label: { $regex: `.*${tag}.*` } } } }
+        })
+        filter = { $and: tags }
+    }
+    Photos.paginate(filter, options).then(
         photos => res.json(photos)
     ).catch(
         error => res.status(500).json({
@@ -27,24 +35,6 @@ router.get("/:_id", (req, res) => {
                 error: error.message
             })
         )
-})
-
-router.get("/tag/:label", (req, res) => {
-    console.log(req.params.label)
-    let tags = req.params.label.split(',')
-    console.log(tags)
-    tags = tags.map(tag => {
-        return { tags: { $elemMatch: { label: { $regex: `.*${tag}.*` } } } }
-    })
-    console.log(tags)
-    Photos.find({
-        $and: tags
-    })
-        .then(photos => {
-            console.log(photos)
-            res.json(photos)
-        })
-        .catch(err => console.log(err))
 })
 
 router.get("/image/:_id", (req, res) => {
