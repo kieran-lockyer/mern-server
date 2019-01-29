@@ -6,7 +6,7 @@ const Photos = require('../models/PhotoModel')
 router.get('/', (req, res) => {
     const options = {
         page: req.query.pageNo,
-        limit: 10
+        limit: 30
     }
     Photos.paginate({}, options).then(
         photos => res.json(photos)
