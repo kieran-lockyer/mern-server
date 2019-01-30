@@ -86,7 +86,7 @@ router.get("/stats/get/trendingtags", (req, res) => {
       $sortByCount: "$label"
     }])
     .then(popTags => {
-      popTags = popTags.slice(0, 10)
+      popTags = popTags.slice(0, 5)
       res.json(popTags)
     })
 })
@@ -95,7 +95,7 @@ router.get("/stats/get/poptags", (req, res) => {
   console.log('fetching')
   Tags.aggregate([{ $unwind: "$label" }, { $sortByCount: "$label" }])
     .then(popTags => {
-      popTags = popTags.slice(0, 10)
+      popTags = popTags.slice(0, 5)
       res.json(popTags)
     })
 })
