@@ -71,6 +71,44 @@ router.get("/stats/:n", async (req, res) => {
   res.send(result)
 })
 
+router.get("/stats/get/trendingtags", (req, res) => {
+  console.log('fetching')
+  Tags.aggregate([
+    {
+      $match: {
+        dateAdded:
+        {
+          $gte:
+            new Date((new Date().getTime() - (7 * 24 * 60 * 60 * 1000)))
+        }
+      }
+    }, {
+      $sortByCount: "$label"
+    }])
+    .then(popTags => {
+      popTags = popTags.slice(0, 10)
+      res.json(popTags)
+    })
+})
+
+router.get("/stats/get/poptags", (req, res) => {
+  console.log('fetching')
+  Tags.aggregate([{ $unwind: "$label" }, { $sortByCount: "$label" }])
+    .then(popTags => {
+      popTags = popTags.slice(0, 10)
+      res.json(popTags)
+    })
+})
+
+router.get("/stats/get/avgtags", (req, res) => {
+  console.log('fetching')
+  Tags.find({ dateAdded: { $gte: new Date((new Date().getTime() - (7 * 24 * 60 * 60 * 1000))) } })
+    .then(tags => {
+      result = (tags.length / 7).toFixed(1)
+      res.json(result)
+    })
+})
+
 router.get("/images/:tag", (req, res) => {
   Tags.find({ "label": req.params.tag })
     .then(photos => res.json(photos))
