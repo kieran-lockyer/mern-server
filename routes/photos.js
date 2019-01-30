@@ -80,7 +80,7 @@ router.get("/stats/:n", async (req, res) => {
     res.send(result)
 })
 
-router.get("/stats/get/avgtags", (req, res) => {
+router.get("/stats/get/avgphotos", (req, res) => {
     console.log('fetching')
     Photos.find({ dateAdded: { $gte: new Date((new Date().getTime() - (7 * 24 * 60 * 60 * 1000))) } })
         .then(photos => {
