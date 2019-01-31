@@ -53,5 +53,4 @@ module.exports = async (req, res) => {
         console.log(result)
         res.send(result)
     }).catch(err => console.log('NOPE', err))
-
 }
