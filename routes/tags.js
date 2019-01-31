@@ -8,6 +8,7 @@ const popularTags = require('./tags/popularTags')
 const avgTags = require('./tags/avgTags')
 const imageFromTag = require('./tags/imageFromTag')
 const deleteTag = require('./tags/deleteTag')
+const relatedImages = require('./tags/relatedImages')
 
 router.get("/", (req, res) => {
   paginatedFilter(req, res)
@@ -33,8 +34,12 @@ router.get("/stats/get/avgtags", (req, res) => {
   avgTags(req, res)
 })
 
-router.get("/images/:_id", (req, res) => {
+router.get("/images/single/:_id", (req, res) => {
   imageFromTag(req, res)
+})
+
+router.get("/images/related/:tag", (req, res) => {
+  relatedImages(req, res)
 })
 
 router.delete("/:_id", (req, res) => {
