@@ -33,7 +33,7 @@ router.get("/stats/get/avgtags", (req, res) => {
   avgTags(req, res)
 })
 
-router.get("/images/:tag", (req, res) => {
+router.get("/images/:_id", (req, res) => {
   imageFromTag(req, res)
 })
 
