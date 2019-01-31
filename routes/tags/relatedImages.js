@@ -1,7 +1,7 @@
-const Tags = require("../../models/TagModel")
+const Tags = require('../../models/TagModel')
 
 module.exports = (req, res) => {
-    Tags.find({ "_id": req.params._id })
+    Tags.find({ "label": req.params.tag })
         .then(photos => res.json(photos))
         .catch(error =>
             res.status(500).json({
