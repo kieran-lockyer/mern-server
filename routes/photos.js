@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const paginatedFilter = require('./photos/paginatedFilter')
+const paginatedFilter = require('./photos/paginatedFilterPhoto')
 const individualPhoto = require('./photos/individualPhoto')
 const deletePhoto = require('./photos/deletePhoto')
-const graphStats = require('./photos/graphStats')
+const graphStats = require('./photos/graphStatsPhotos')
 const avgPhotos = require('./photos/avgPhotos')
 
 router.get("/", (req, res) => {
