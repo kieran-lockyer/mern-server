@@ -2,7 +2,7 @@ const Photos = require('../../models/PhotoModel')
 
 module.exports = async (req, res) => {
     const result = []
-    for (let n = req.params.n; n >= 0; n--) {
+    for (let n = req.params.n; n > 0; n--) {
         console.log(n)
         await Photos.find(
             {

@@ -2,8 +2,7 @@ const Tags = require("../../models/TagModel")
 
 module.exports = async (req, res) => {
     const result = []
-    for (let n = req.params.n; n >= 0; n--) {
-        console.log(n)
+    for (let n = req.params.n; n > 0; n--) {
         await Tags.find(
             {
                 $and: [
