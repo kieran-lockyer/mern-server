@@ -50,7 +50,6 @@ module.exports = async (req, res) => {
                 result.push(0)
             }
         }
-        console.log(result)
         res.send(result)
     }).catch(err => console.log('NOPE', err))
 }

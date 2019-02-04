@@ -16,7 +16,6 @@ mongoose.connect(dbConn, (err) => {
 
 app.use('/photos', require('./routes/photos'))
 app.use('/tags', require('./routes/tags'))
-app.use('/clients', require('./routes/clients'))
 
 app.get('/', (req, res) => {
     res.status(200).send("Sortal Dashboard")

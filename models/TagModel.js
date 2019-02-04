@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const mongoosePaginate = require('mongoose-paginate-v2')
 
-const tagSchema = mongoose.Schema({
+const tagSchema = new Schema({
     label: String,
     confidence: Number,
     imageId: String,

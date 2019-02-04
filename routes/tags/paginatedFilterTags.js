@@ -1,15 +1,16 @@
 const Tags = require("../../models/TagModel")
 
 module.exports = (req, res) => {
+    const { pageNo, limit, field, order, label } = req.query
     const options = {
-        page: req.query.pageNo,
-        limit: parseInt(req.query.limit)
+        page: pageNo,
+        limit: parseInt(limit),
+        sort: {}
     }
-    options['sort'] = {}
-    options.sort[req.query.field] = req.query.order
+    options.sort[field] = order
     let filter
-    if (req.query.label) {
-        filter = { label: { $regex: `.*${req.query.label}.*` } }
+    if (label) {
+        filter = { label: { $regex: `.*${label}.*` } }
     }
     Tags.paginate(filter, options).then(
         photos => res.json(photos)

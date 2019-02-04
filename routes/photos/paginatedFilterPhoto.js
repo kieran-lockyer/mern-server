@@ -1,16 +1,16 @@
 const Photos = require('../../models/PhotoModel')
 
 module.exports = (req, res) => {
+    const { pageNo, limit, field, order } = req.query
     const options = {
-        page: req.query.pageNo,
-        limit: parseInt(req.query.limit)
+        page: pageNo,
+        limit: parseInt(limit)
     }
     options['sort'] = {}
-    options.sort[req.query.field] = req.query.order
+    options.sort[field] = order
     let filter
     if (req.query.tags) {
-        let tags = req.query.tags.split(',')
-        tags = tags.map(tag => {
+        let tags = req.query.tags.split(',').map(tag => {
             return { tags: { $elemMatch: { label: { $regex: `.*${tag}.*` } } } }
         })
         filter = { $and: tags }
