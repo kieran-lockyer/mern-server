@@ -19,4 +19,10 @@ describe("Photos Routes", () => {
         expect(response.data.docs[0].tags[0].label).toBe("unicycle, monocycle")
         expect(moment(response.data.docs[0].dateAdded).isAfter(response.data.docs[1].dateAdded)).toBe(false)
     })
+
+    it("Sends Image", async () => {
+        const response = await axios.get("http://localhost:3001/photos/image/IMG_6808.JPG")
+        expect(response.status).toBe(200)
+        expect(response.data).toBeTruthy
+    })
 })
