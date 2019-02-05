@@ -6,6 +6,7 @@ module.exports = (Tags, Photos) => {
         Tags.find({ dateAdded: { $gte: new Date((new Date().getTime() - (7 * 24 * 60 * 60 * 1000))) } })
             .then(tags => {
                 result = (tags.length / 7).toFixed(1)
+                res.status(200)
                 res.json(result)
             }).catch(
                 error => res.status(500).json({
@@ -18,6 +19,7 @@ module.exports = (Tags, Photos) => {
         Photos.find({ dateAdded: { $gte: new Date((new Date().getTime() - (7 * 24 * 60 * 60 * 1000))) } })
             .then(photos => {
                 result = (photos.length / 7).toFixed(1)
+                res.status(200)
                 res.json(result)
             }).catch(
                 error => res.status(500).json({
@@ -30,6 +32,7 @@ module.exports = (Tags, Photos) => {
         Tags.aggregate([{ $unwind: "$label" }, { $sortByCount: "$label" }])
             .then(popTags => {
                 popTags = popTags.slice(0, 5)
+                res.status(200)
                 res.json(popTags)
             }).catch(
                 error => res.status(500).json({
@@ -53,6 +56,7 @@ module.exports = (Tags, Photos) => {
             }])
             .then(popTags => {
                 popTags = popTags.slice(0, 5)
+                res.status(200)
                 res.json(popTags)
             }).catch(
                 error => res.status(500).json({
@@ -65,12 +69,14 @@ module.exports = (Tags, Photos) => {
         if (req.query.model === 'tags') {
             await Tags.aggregate(graphQuery(req.query.days)).then(dates => {
                 result = collateStats(dates, req.query.days)
-                res.send(result)
+                res.status(200)
+                res.json(result)
             })
         } else if (req.query.model === 'photos') {
             await Photos.aggregate(graphQuery(req.query.days)).then(dates => {
                 result = collateStats(dates, req.query.days)
-                res.send(result)
+                res.status(200)
+                res.json(result)
             })
         } else {
             res.status(400)
