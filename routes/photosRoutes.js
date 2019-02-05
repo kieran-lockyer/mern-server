@@ -9,7 +9,7 @@ module.exports = (Photos) => {
     router.get("/:_id", photosContoller.individualPhoto)
 
     router.get("/image/:_id", (req, res) => {
-        res.sendFile(process.cwd() + `/db/images/${req.params._id}`)
+        res.status(200).sendFile(process.cwd() + `/db/images/${req.params._id}`)
     })
 
     router.delete('/:_id', photosContoller.deletePhoto)

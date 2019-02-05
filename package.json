@@ -3,15 +3,6 @@
   "version": "1.0.0",
   "description": "Everything express server related goes here.",
   "main": "server.js",
-  "jest": {
-    "verbose": true,
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/node_modules/**",
-      "!**/coverage/**"
-    ]
-  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
@@ -22,12 +13,14 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
-    "jest": "^24.0.0",
-    "moment": "^2.24.0"
+    "expect": "^24.0.0",
+    "mocha": "^5.2.0",
+    "moment": "^2.24.0",
+    "sinon": "^7.2.3"
   },
   "scripts": {
     "start": "node server.js",
-    "test": "jest"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
