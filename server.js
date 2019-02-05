@@ -1,12 +1,13 @@
-const express = require('express')
-const app = express()
-const dbConn = require('./db')
-const mongoose = require('mongoose')
-const cors = require('cors')
+const app = require('express')()
 
+// Allows for cross origin requests from our React Client
+const cors = require('cors')
 app.use(cors())
 
-mongoose.connect(dbConn, (err) => {
+// Connects to our MLAB Database
+const mongoose = require('mongoose')
+const database = require('./db')
+mongoose.connect(database, (err) => {
     if (err) {
         console.log('Error connecting to database', err)
     } else {
@@ -14,9 +15,14 @@ mongoose.connect(dbConn, (err) => {
     }
 })
 
-app.use('/photos', require('./routes/photos'))
-app.use('/tags', require('./routes/tags'))
+// MODELS
+const Tags = require('./models/TagModel')
+const Photos = require('./models/PhotoModel')
 
+// Routes with models passed through
+app.use('/photos', require('./routes/photos')(Photos))
+app.use('/tags', require('./routes/tags')(Tags))
+app.use('/stats', require('./routes/stats')(Tags, Photos))
 app.get('/', (req, res) => {
     res.status(200).send("Sortal Dashboard")
 })
