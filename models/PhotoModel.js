@@ -4,7 +4,13 @@ const mongoosePaginate = require('mongoose-paginate-v2')
 
 const photoSchema = new Schema({
     _id: String,
-    tags: Array,
+    tags: [
+        {
+            label: String,
+            confidence: Number,
+            tagId: { type: Schema.Types.ObjectId, ref: 'Tag' }
+        }
+    ],
     dateAdded: Date
 })
 
