@@ -1,8 +1,8 @@
 const express = require("express")
 const router = express.Router()
 
-module.exports = (Tags) => {
-  const tagsController = require('../controllers/tagsController')(Tags)
+module.exports = (Tags, Photos) => {
+  const tagsController = require('../controllers/tagsController')(Tags, Photos)
 
   router.get("/", tagsController.paginatedFilter)
 
