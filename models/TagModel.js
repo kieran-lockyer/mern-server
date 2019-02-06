@@ -5,7 +5,7 @@ const mongoosePaginate = require('mongoose-paginate-v2')
 const tagSchema = new Schema({
     label: String,
     confidence: Number,
-    imageId: { type: Schema.Types.ObjectId, ref: 'Photo' },
+    imageId: String,
     source: Object,
     dateAdded: Date
 })
