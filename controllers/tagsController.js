@@ -65,7 +65,6 @@ module.exports = (Tags, Photos) => {
 
     //delete
     const deleteTag = async (req, res) => {
-        console.log('Deleting Tag from Photo')
         await Photos.updateOne({
             tags: {
                 $elemMatch: {
@@ -79,26 +78,19 @@ module.exports = (Tags, Photos) => {
                 }
             }
         })
-        .then(() => {
-            console.log('Deleted Tag from Photo')
-        })
         .catch(error =>
             res.status(500).json({
                 error: error.message
             })
         )
 
-        console.log('Deleting Tag from Database')
         await Tags.findByIdAndRemove(req.params._id)
-        .then(() => {
-            console.log('Deleted Tag from Database')
-        })
         .catch(error =>
             res.status(500).json({
                 error: error.message
             })
         )
-        console.log('Done')
+        
         res.send(204)
     }
     

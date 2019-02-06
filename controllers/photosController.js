@@ -39,14 +39,32 @@ module.exports = (Tags, Photos) => {
         )
     }
 
-    const deletePhoto = (req, res) => {
-        Photos.findByIdAndRemove(req.params._id).then(
-            () => res.status(204)
-        ).catch(
-            error => res.status(500).json({
-                error: error.message
+    const deletePhoto = async (req, res) => {
+        await Photos.find({_id: req.params._id})
+            .then( async (photos) => {
+                for (let tag of photos[0].tags) {
+                    await Tags.findByIdAndRemove(tag.tagId)
+                        .catch(error =>
+                            res.status(500).json({
+                                error: error.message
+                            })
+                        )
+                }
             })
-        )
+            .catch(error =>
+                res.status(500).json({
+                    error: error.message
+                })
+            )
+        
+        await Photos.findByIdAndRemove(req.params._id)
+            .catch(error =>
+                res.status(500).json({
+                    error: error.message
+                })
+            )
+        
+        res.send(204)
     }
 
     return {
