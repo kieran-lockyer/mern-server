@@ -20,8 +20,8 @@ const Tags = require('./models/TagModel')
 const Photos = require('./models/PhotoModel')
 
 // Routes with models passed through
-app.use('/photos', require('./routes/photosRoutes')(Photos))
-app.use('/tags', require('./routes/tagsRoutes')(Tags))
+app.use('/photos', require('./routes/photosRoutes')(Tags, Photos))
+app.use('/tags', require('./routes/tagsRoutes')(Tags, Photos))
 app.use('/stats', require('./routes/statsRoutes')(Tags, Photos))
 app.get('/', (req, res) => {
     res.status(200).send("Sortal Dashboard")

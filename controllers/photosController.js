@@ -1,4 +1,4 @@
-module.exports = (Photos) => {
+module.exports = (Tags, Photos) => {
     const individualPhoto = (req, res) => {
         Photos.find({ _id: req.params._id })
             .then(photo => {
