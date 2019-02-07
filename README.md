@@ -49,9 +49,18 @@ Our application has 3 main functions:
   - Clicking on a tag shows further info about the tag including the image it’s associated with, the source model and it’s related images.
 
 ## Screenshots:
-
-
-
+### Analytics Dashboard
+![Analytics Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/AnalyticsDashboard.png)
+### Photos Dashboard
+![Photos Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/PhotosList.png)
+### Photos Gallery
+![Photos Gallery](https://github.com/kieran-lockyer/mern-server/blob/master/docs/PhotosGallery.png)
+### Photo Item
+![Photo Item](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Photo%20view.png)
+### Tags Dashboard
+![Tags Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/TagsList.png)
+### Tag Item
+![Tags Item](https://github.com/kieran-lockyer/mern-server/blob/master/docs/tag%20view.png)
 
 ## Instructions on how to setup, configure, deploy and use your App:
 ### Requirements:
@@ -173,14 +182,36 @@ From the Tag View a user can:
 
 
 
-
-
 ## Database Entity Relationship Diagrams:
+![ERD](https://github.com/kieran-lockyer/mern-server/blob/master/docs/ERD.jpg)
 
-
-
-## Data Flow Diagram:
-TBC
+## Data Flow Diagrams:
+#### GET /photos?query
+![Photos](https://github.com/kieran-lockyer/mern-server/blob/master/docs/photos_query.jpg)
+#### GET /photos/:_id
+![Photos](https://github.com/kieran-lockyer/mern-server/blob/master/docs/photos_id.jpg)
+#### GET /photos/image/:_id
+![Photos](https://github.com/kieran-lockyer/mern-server/blob/master/docs/photos_image.jpg)
+#### DELETE /photos/:_id
+![Photos](https://github.com/kieran-lockyer/mern-server/blob/master/docs/delete_photos_id.jpg)
+#### GET /tags?query
+![Tags](https://github.com/kieran-lockyer/mern-server/blob/master/docs/tags_query.jpg)
+#### GET /tags/:_id
+![Tags](https://github.com/kieran-lockyer/mern-server/blob/master/docs/tags_id.jpg)
+#### GET /tags/related/:tag
+![Tags](https://github.com/kieran-lockyer/mern-server/blob/master/docs/tags_related.jpg)
+#### DELETE /tags/:_id
+![Tags](https://github.com/kieran-lockyer/mern-server/blob/master/docs/delete_tags_id.jpg)
+#### GET /stats?query
+![Stats](https://github.com/kieran-lockyer/mern-server/blob/master/docs/stats_query.jpg)
+#### GET /stats/avgtags
+![Stats](https://github.com/kieran-lockyer/mern-server/blob/master/docs/stats_avgtags.jpg)
+#### GET /stats/avgphotos
+![Stats](https://github.com/kieran-lockyer/mern-server/blob/master/docs/stats_avgphotos.jpg)
+#### GET /stats/trendingtags
+![Stats](https://github.com/kieran-lockyer/mern-server/blob/master/docs/stats_trendingtags.jpg)
+#### GET /stats/poptags
+![Stats](https://github.com/kieran-lockyer/mern-server/blob/master/docs/stats_poptags.jpg)
 
 
 ## Object Orientated design documentation:
