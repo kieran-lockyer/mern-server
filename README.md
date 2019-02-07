@@ -312,11 +312,14 @@ Communication with the client
 
 ### Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
 
-- Mitch - My knowledge and skills on this project were lacking as I am still trying to get my head around the basics of MERN.
-In future projects I need to do further my overall understanding with experience by building my own application allowing me to learn and understand all aspects.
-- Kieran - Coming Soon!
-- Shubha - Coming Soon!
-- Glenn - Coming Soon!
+- Mitch - My knowledge and skills on this project were lacking as I am still trying to get my head around the basics of MERN. In future projects I need to do further my overall understanding with experience by building my own application allowing me to learn and understand all aspects.
+
+- Kieran - I'm proud of our accomplishments on this assignment as a team, and my individual contribution. I found my strength to be in creating documentation, facilitating communication among the team and with the client, and configuring the express server. I am very proud of how neat the express server is and how modular the code is. In the future I'd like to have more involvement in the react client side of things, as while I did have a small contribution, I'd like to learn more about using redux which was a big part of our assignment.
+
+- Shubha - There is lots of scope of learning as with every project you get the better understanding  of your area of weakness and strength. I learnt a lot sifrom my teammates especially the way to approach the problem. I got the better understanding of the overall work flow of the app from client side to server side.My knowledge of react -redux gradually got better and on server I still need to work on writing the queries from the database.The take away of this project is to build a small app and work on your weakness and turn them into your strength.
+
+- Glenn - My knowledge of react and redux has gradually increased over the course of this project and being able to keep my code DRY and well organized has gotten better, but was certainly a struggle early on, during this project. As for future improvements, there needs to be an ability to login/register, edit tags, and add new photos.
+
 - Margaret - Coming Soon!
 
 
