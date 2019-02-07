@@ -1,4 +1,4 @@
-# mern-server
+# MERN SERVER
 ### Published App
 https://ca-mern-client.netlify.com/
 
