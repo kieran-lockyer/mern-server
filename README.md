@@ -277,12 +277,13 @@ Communication with the client
 
 
 ### Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
-` - Mitch - My knowledge and skills on this project were lacking as I am still trying to get my head around the basics of MERN.
+
+- Mitch - My knowledge and skills on this project were lacking as I am still trying to get my head around the basics of MERN.
 In future projects I need to do further my overall understanding with experience by building my own application allowing me to learn and understand all aspects.
-` - Kieran - Coming Soon!
-  - Shubha - Coming Soon!
-  - Glenn - Coming Soon!
-  - Margaret - Coming Soon!
+- Kieran - Coming Soon!
+- Shubha - Coming Soon!
+- Glenn - Coming Soon!
+- Margaret - Coming Soon!
 
 
 
