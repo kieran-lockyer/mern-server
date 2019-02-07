@@ -1,4 +1,5 @@
 module.exports = (Tags, Photos) => {
+    // Retrieves a single Photo Object from MLAB
     const individualPhoto = (req, res) => {
         Photos.find({ _id: req.params._id })
             .then(photo => {
@@ -11,6 +12,11 @@ module.exports = (Tags, Photos) => {
                 })
             })
     }
+
+    // Returns a paginated llist of all the photos. 
+    // Field is the data which the list will be sorted by either dateAdded, confidence or tags. 
+    // Order is the direction in which its sorted.
+    // Tags is a comma seperated string of tags to filter the data by.
 
     const paginatedFilter = (req, res) => {
         const { pageNo, limit, field, order } = req.query
@@ -39,6 +45,7 @@ module.exports = (Tags, Photos) => {
         )
     }
 
+    // Deletes the Photo and all it's associated Tags
     const deletePhoto = async (req, res) => {
         await Photos.find({ _id: req.params._id })
             .then(async (photos) => {

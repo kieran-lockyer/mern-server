@@ -1,5 +1,5 @@
 module.exports = (Tags, Photos) => {
-    //get
+    // Retrieves and individual tag.
     const individualTag = (req, res) => {
         Tags.find({ _id: req.params._id })
             .then(tag => {
@@ -13,6 +13,7 @@ module.exports = (Tags, Photos) => {
             )
     }
 
+    // Retrieves a list of all the tags with that label name
     const relatedImages = (req, res) => {
         Tags.find({ "label": req.params.tag })
             .then(photos => {
@@ -25,6 +26,11 @@ module.exports = (Tags, Photos) => {
                 })
             )
     }
+
+    // Returns a paginated llist of all the photos. 
+    // Field is the data which the list will be sorted by either dateAdded, confidence or tags. 
+    // Order is the direction in which its sorted.
+    // Label is the name of the tag you want to filter for.
 
     const paginatedFilter = (req, res) => {
         const { pageNo, limit, field, order, label } = req.query
@@ -50,7 +56,7 @@ module.exports = (Tags, Photos) => {
             )
     }
 
-    //delete
+    // Deletes a tag from MLAB and removes it's reference from the Photos.tags array.
     const deleteTag = async (req, res) => {
         await Photos.updateOne({
             tags: {
