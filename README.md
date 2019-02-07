@@ -257,12 +257,18 @@ Screenshots of Trello board(s):
 ## Answers to the Short Answer questions:
 
 ### What are the most important aspects of quality software?
-It’s ability to fulfill its intended purpose. Performing its intended purpose is the primary function of any software and as such plays the biggest role in measuring the quality of software. If it doesn’t do what it’s supposed to do, then by definition it’s poor quality.
-It’s usability. A program that is a pleasure to navigate and use is of higher quality. If it can do what it’s supposed to do, but requires a lot of training, isn’t intuitive, or may be slow or difficult to use for some other reason discourages people using it.
-Maintainable code will produce higher quality software. As user needs are always changing, having well maintainable code allows developers to more efficiently and more quickly implement changes to satisfy future demand. Also as all software will have undiscovered bugs, having maintainable code allows for a more efficient and speedy debugging process. Frequent updates and speedy bug fixes are things that make the end user happier and thus are a reflection of higher quality code.
-Efficiency of the code in run-time is an important aspect of quality software as highly efficient code will run faster and is more scalable, especially in algorithmic or transactional processing situations. Inefficient code may work well at first, but as the use and input size scale, the software will quickly become laborious to use.
-Reliability is also very important to consider when developing high quality software. Code with poor application architecture practices, bad error or exception handling, poor control flow structure or other bad practices may produce software that is buggy, prone to crashing, or other unwanted side effects. Having robust and well tested static attributes goes a long way to creating reliable, high quality software.
-Security is a big concern and is more important each day when creating high quality software. Having vulnerabilities that may expose sensitive information, or open avenues for attacking end users devices such as ransomware can cause serious impacts. Protecting against these threats is an important part of high quality software.
+It’s ability to **fulfill its intended purpose**. Performing its intended purpose is the primary function of any software and as such plays the biggest role in measuring the quality of software. If it doesn’t do what it’s supposed to do, then by definition it’s poor quality.
+
+It’s **usability**. A program that is a pleasure to navigate and use is of higher quality. If it can do what it’s supposed to do, but requires a lot of training, isn’t intuitive, or may be slow or difficult to use for some other reason discourages people using it.
+
+**Maintainable** code will produce higher quality software. As user needs are always changing, having well maintainable code allows developers to more efficiently and more quickly implement changes to satisfy future demand. Also as all software will have undiscovered bugs, having maintainable code allows for a more efficient and speedy debugging process. Frequent updates and speedy bug fixes are things that make the end user happier and thus are a reflection of higher quality code.
+
+**Efficiency** of the code in run-time is an important aspect of quality software as highly efficient code will run faster and is more scalable, especially in algorithmic or transactional processing situations. Inefficient code may work well at first, but as the use and input size scale, the software will quickly become laborious to use.
+
+**Reliability** is also very important to consider when developing high quality software. Code with poor application architecture practices, bad error or exception handling, poor control flow structure or other bad practices may produce software that is buggy, prone to crashing, or other unwanted side effects. Having robust and well tested static attributes goes a long way to creating reliable, high quality software.
+
+**Security** is a big concern and is more important each day when creating high quality software. Having vulnerabilities that may expose sensitive information, or open avenues for attacking end users devices such as ransomware can cause serious impacts. Protecting against these threats is an important part of high quality software.
+
 
 ### What libraries are being used in the app and why?
 #### Express Server:
@@ -281,19 +287,49 @@ Momentjs is a really handy tool which we are using to manipulate Date objects in
 ##### Axios
 Axios is being used to run requests on our routes for testing purposes.
 ##### Expect
-Expect is being used in testing to define expected outputs and mark it’s success or failure.
+Expect is being used in testing as an assertion library define expected outputs and mark it’s success or failure.
 ##### Sinon
 Sinon is being used in testing to spy on function calls when testing our Controllers.
 ##### Mocha
 Mocha is the backend testing framework we are using to run all our tests.
 
 #### React Client:
-Blueprint js
-Redux
-Axios
-Moment
-Grid gallery
-Apex chart
+##### Blueprintjs
+Being used for styling and icons
+##### Jest
+Testing framework
+##### Node
+Used to run JavaScript and install packages
+##### React
+Used to create the front end client
+##### React-dom
+Renders compononents
+##### React-router-dom
+Routes to specific components depending on the uri
+##### Apexchart
+Provides components for various charts and cards
+##### Axios
+Used to send requests to our Express Server
+##### Enzyme
+Helps writing tests with Jest
+##### Moment
+Used to handle Date objects
+##### Node-sass
+Enables SCSS to be used
+##### React-grid-gallery
+Creates the Photo Gallery
+##### React-preloaders
+Provides the animation for when a page is loading
+##### React-redux
+Handles state in a centralized store
+##### React-scripts
+Enables us to run scripts from the command line
+##### Redux-thunk
+Asynchronous action creaters
+##### Styled-components
+Enables custom styled components in a streamlined way
+##### Typescript
+Enables strongly typed Javascript and provides consistently styled code.
 
 ### A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 The team would need fundamental knowledge about how the internet works, and depending on the scale of the project, more specialised knowledge on HTTP requests, Authentication and Authorisation, Cross Origin Requests, Cookies or Local Storage etc.
@@ -303,10 +339,13 @@ The team would also need some basic tools to help develop and collaborate such a
 Communicating with the client is important and the team will need the skills to be able to gather clients requirements and expectations, and to be able to break that down to formal specifications that can then be used to guide development.
 
 ### Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
-Knowing how to google and stack overflow.
-Knowing when to ask for help
-Communication within team
-Communication with the client
+We needed good knowledge of Git for source control, and adherance to Agile Methodologies for assigning tasks and managing progress through the assisngment.
+
+We needed knowledge of MongoDB and mongo queries to retrieve data, Express to create the server and routes that our front end can query, and React/Redux to retrieve and render the data through the client to the end user.
+
+Was also needed knowledge of HTTP Requests, React Component Lifecycle and asynchronous code to efficiently deliver the data from the back end to the front end.
+
+Being able to use Agile Methodologies to break down the clients requirements into small user stories greatly helped with the delivery of our application, and our strong communication skills, within the team and with our client also helped greatly.
 
 
 ### Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
@@ -319,9 +358,4 @@ Communication with the client
 
 - Glenn - My knowledge of react and redux has gradually increased over the course of this project and being able to keep my code DRY and well organized has gotten better, but was certainly a struggle early on, during this project. As for future improvements, there needs to be an ability to login/register, edit tags, and add new photos.
 
-- Margaret - Coming Soon!
-
-
-
-
-
+- Margaret - Coming Soon! She has a job, giver her some slack!
