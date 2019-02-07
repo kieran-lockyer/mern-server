@@ -196,21 +196,21 @@ Once we had an idea of what we were working on, we created an ERD and fleshed ou
 Once we had an idea of what we were working on, our plan was to develop the Express Server and React Client in parallel, working on one complete feature end-to-end at a time in short sprints. We used agile methodologies and Trello to keep track of our progress.
 We planned to have completed our MVP by the 1st February, but after some changes to the structure of the data on Sortal’s end, implementing rigorous testing and perfecting some fiddly parts of the project such as maintaining sorting order while navigating pages proved more time consuming than we initially planned, and as such we didn’t finish major development until 7th February, almost a week behind schedule.
 #### Overview:
-Find a client:
-Initial plan: 18th January
-Completed on: 17th January
-Create ERD, User Stories, Wireframes, User Workflow:
-Initial plan: 22nd January
-Completed on: 21st January
-Working MVP:
-Initial plan: 1st February
-Completed on: 6th February
-Documentation Completed:
-Initial plan: 5th February
-Completed on 7th February
-Presentation Materials Finalised:
-Initial plan: 6th February
-Completed on: 7th February
+  - Find a client:
+    - Initial plan: 18th January
+    - Completed on: 17th January
+  - Create ERD, User Stories, Wireframes, User Workflow:
+    - Initial plan: 22nd January
+    - Completed on: 21st January
+  - Working MVP:
+    - Initial plan: 1st February
+    - Completed on: 6th February
+  - Documentation Completed:
+    - Initial plan: 5th February
+    - Completed on 7th February
+  - Presentation Materials Finalised:
+    - Initial plan: 6th February
+    - Completed on: 7th February
 
 ### Client communications:
 We were in constant contact with Sortal throughout the project, asking questions and providing updates and feedback.
