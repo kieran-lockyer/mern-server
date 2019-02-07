@@ -244,6 +244,40 @@ We planned to have completed our MVP by the 1st February, but after some changes
   - Presentation Materials Finalised:
     - Initial plan: 6th February
     - Completed on: 7th February
+    
+### Source Control:
+We created a Trello card with git workflow guidelines on day 1:
+
+"Each team member will **create a fork of the master repos**, and clone them to their MERN Project folder. 
+
+Then, **set an upstream connection to the master repo with** 
+mern client:
+'git remote add upstream git@github.com:gfrancis13/mern-client.git' 
+mern server:
+'git remote add upstream git@github.com:kieran-lockyer/mern-server.git' 
+
+Before writing any code,** create a well named feature branch with a defined scope.**
+
+Once it's ready and working, **create a pull request** from the respective master repo and your **code will be reviewed**. **This includes repo maintainers**, everyone's code needs to be reviewed before it's merged into the master.
+
+Once your pull request has been approved and merged, **switch back to your master branch, and pull down from the master repo.**
+
+If we follow this, we won't have a single issue."
+
+### Trello:
+We also created a Trello card for Trellow workflow on day 1:
+
+"**Before you write any code, make a Trello card or assign an existing one to yourself**. This will avoid two people unwittingly working on the same task.
+
+If you are working on a Trello card, by adding yourself as a member. 
+
+Make sure it's in the correct column, and when you've completed a task, **move it along** the Trello board.
+
+Make sure if you add a new card, to **give it a label for Priority and an estimated "Shirt Size"**. We don't want to overlook a critical task because it wasn't highlighted as a priority."
+
+### Pair Programming:
+We decided to do coding sprints in pairs, and utilisied the projector in the rec room to our advantage.
+We also used the VS Code extension LiveShare to remotely pair program to great effect.
 
 ### Client communications:
 We were in constant contact with Sortal throughout the project, asking questions and providing updates and feedback.
@@ -251,8 +285,13 @@ We worked in their office at Fishburners on Thursdays in order to ask questions 
 To keep in communication with Sortal remotely and to share resources we used Trello, Slack and Google Docs.
 Google docs was particularly useful when for sharing ideas and fleshing out user stories with Sortal.
 
-Screenshots of Trello board(s):
+![At Sortal](https://github.com/kieran-lockyer/mern-server/blob/master/docs/atSortal.jpg)
 
+![At Sortal](https://github.com/kieran-lockyer/mern-server/blob/master/docs/slack.jpg)
+
+### Screenshots of Trello board(s):
+![Trello Early](https://github.com/kieran-lockyer/mern-server/blob/master/docs/earlytrello.png)
+![Trello Late](https://github.com/kieran-lockyer/mern-server/blob/master/docs/trello3.JPG)
 
 ## Answers to the Short Answer questions:
 
@@ -358,4 +397,4 @@ Being able to use Agile Methodologies to break down the clients requirements int
 
 - Glenn - My knowledge of react and redux has gradually increased over the course of this project and being able to keep my code DRY and well organized has gotten better, but was certainly a struggle early on, during this project. As for future improvements, there needs to be an ability to login/register, edit tags, and add new photos.
 
-- Margaret - Coming Soon! She has a job, giver her some slack!
+- Margaret - My knowledge and skills in the beginning were not very good and I had a hard time catching up, I was in the middle of an interviewing process at the time and was busy with many things, However I spent every spare hour I had (and weekends in the library). I also left the projects half way through to start working. Future improvements would be not leaving halfway through.
