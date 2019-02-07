@@ -233,25 +233,25 @@ Security is a big concern and is more important each day when creating high qual
 
 ### What libraries are being used in the app and why?
 #### Express Server:
-Express
+##### Express
 Express is used to spin up the backend server and to create all the routes that our React Client uses to request data.
-CORS
+##### CORS
 CORS is being used to accept cross origin requests from our React Client.
-Mongoose
+##### Mongoose
 Mongoose is being used to handle creating our model schemas and for querying the MongoDB database.
-Mongoose-pagination-v2
+##### Mongoose-pagination-v2
 Mongoose pagination v2 is being utilised as a simple way of returning our tags and photos data in a paginated format.
-Dotenv
+##### Dotenv
 Dotenv enables us to create a .env file which stores our private username and password to MLAB which is hosting our MongoDB
-Moment
+##### Moment
 Momentjs is a really handy tool which we are using to manipulate Date objects in our graph stats route.
-Axios
+##### Axios
 Axios is being used to run requests on our routes for testing purposes.
-Expect
+##### Expect
 Expect is being used in testing to define expected outputs and mark it’s success or failure.
-Sinon
+##### Sinon
 Sinon is being used in testing to spy on function calls when testing our Controllers.
-Mocha
+##### Mocha
 Mocha is the backend testing framework we are using to run all our tests.
 
 #### React Client:
