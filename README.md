@@ -174,7 +174,8 @@ From the Tag View a user can:
   - Delete the tag, which also removes it from it's associated Photo.
 
 
-## A workflow diagram of the user journey/s:
+## User Workflow Diagram:
+![User Workflow](https://github.com/kieran-lockyer/mern-server/blob/master/docs/User%20Flow%20Diagram.png)
 
 
 ## Wireframes:
