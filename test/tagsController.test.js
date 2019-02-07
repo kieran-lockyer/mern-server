@@ -47,14 +47,6 @@ describe("Tags Controller Tests", () => {
         sinon.assert.calledWith(res.json, "Promise Resolved")
     })
 
-    it('Image From Tag', async () => {
-
-        await tagsContoller.imageFromTag(req, res)
-
-        sinon.assert.calledWith(res.status, 200)
-        sinon.assert.calledWith(res.json, "Promise Resolved")
-    })
-
     it('Tag Pagination', async () => {
 
         await tagsContoller.paginatedFilter(req, res)
