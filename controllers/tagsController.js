@@ -36,7 +36,7 @@ module.exports = (Tags, Photos) => {
         options.sort[field] = order
         let filter
         if (label) {
-            filter = { label: { $regex: `.*${label}.*` } }
+            filter = { label: { $regex: `.*${label}.*`, $options: 'i' } }
         }
         Tags.paginate(filter, options).then(
             photos => {
