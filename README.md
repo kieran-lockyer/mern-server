@@ -49,9 +49,12 @@ Our application has 3 main functions:
   - Clicking on a tag shows further info about the tag including the image it’s associated with, the source model and it’s related images.
 
 ## Screenshots:
-
-
-
+![Analytics Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/AnalyticsDashboard.png)
+![Photos Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/PhotosList.png)
+![Photos Gallery](https://github.com/kieran-lockyer/mern-server/blob/master/docs/PhotosGallery.png)
+![Photo Item](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Photo%20view.png)
+![Tags Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/TagsList.png)
+![Tags Item](https://github.com/kieran-lockyer/mern-server/blob/master/docs/tag%20view.png)
 
 ## Instructions on how to setup, configure, deploy and use your App:
 ### Requirements:
