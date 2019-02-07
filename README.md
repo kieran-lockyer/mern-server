@@ -177,9 +177,19 @@ From the Tag View a user can:
 ## A workflow diagram of the user journey/s:
 
 
-
 ## Wireframes:
-
+### Analytics Dashboard
+![Analytics Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Graph%20WireFrame.png)
+### Photos Dashboard
+![Photos Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Photos%20WireFrame.png)
+### Photos Gallery
+![Photos Gallery](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Grid%20WireFrame.png)
+### Photo Item
+![Photo Item](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Photos%20Clicked%20WireFrame.png)
+### Tags Dashboard
+![Tags Dashboard](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Tags%20WireFrame.png)
+### Tag Item
+![Tags Item](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Tags%20Clicked%20WireFrame.png)
 
 
 ## Database Entity Relationship Diagrams:
