@@ -215,9 +215,8 @@ From the Tag View a user can:
 
 
 ## Object Orientated design documentation:
-YET TO BE DONE
+![Object Orientated Diagram](https://github.com/kieran-lockyer/mern-server/blob/master/docs/Object%20Orientated%20Diagram.png)
 
-(Components and which are function and which classes and props passed and state.)
 
 ## Project Management & Planning
 ### Project plan & timeline:
