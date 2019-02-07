@@ -190,11 +190,14 @@ YET TO BE DONE
 
 ## Project Management & Planning
 ### Project plan & timeline:
-Our timeline was to find a client before the end of the first week so that we would have ample time to complete the clients project requirements with time to spare to prepare proper documentation and presentation materials.
-We did find a client within the first week with us agreeing to complete a project for Sortal on the 17th January.
-Once we had an idea of what we were working on, we created an ERD and fleshed out user stories with Sortal. Sortal also provided us some visual aides to help create the wireframes in a way that’s consistent with their existing platform.
-Once we had an idea of what we were working on, our plan was to develop the Express Server and React Client in parallel, working on one complete feature end-to-end at a time in short sprints. We used agile methodologies and Trello to keep track of our progress.
-We planned to have completed our MVP by the 1st February, but after some changes to the structure of the data on Sortal’s end, implementing rigorous testing and perfecting some fiddly parts of the project such as maintaining sorting order while navigating pages proved more time consuming than we initially planned, and as such we didn’t finish major development until 7th February, almost a week behind schedule.
+Our timeline was to find a client before the end of the first week so that we would have ample time to complete the clients project requirements with time to spare to prepare proper documentation and presentation materials. We did find a client within the first week with us agreeing to complete a project for Sortal on the 17th January.
+
+Our next step was creating an ERD and fleshing out user stories with Sortal. Sortal also provided us some visual aides to help create the wireframes in a way that’s consistent with their existing platform.
+
+Once we had an idea of what we were working on, our plan was to develop the Express Server and React Client in parallel, working on one complete feature end-to-end at a time in short sprints. We used agile methodologies and Trello to keep track of our progress. We also implemented continuous integreation tools to autmoatically deploy to our React Front End on Netlify, and deployed new features to our Express Back End on Heroku as they were completed and tested.
+
+We planned to have completed our MVP by the 1st February, but after some changes to the structure of the data on Sortal’s end, implementing rigorous testing and perfecting some fiddly parts of the project such as maintaining sorting order while navigating pages proved more time consuming than we initially planned, and as such we didn’t finish major development until 6th February, almost a week behind schedule.
+
 #### Overview:
   - Find a client:
     - Initial plan: 18th January
