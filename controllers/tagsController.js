@@ -26,19 +26,6 @@ module.exports = (Tags, Photos) => {
             )
     }
 
-    const imageFromTag = (req, res) => {
-        Tags.find({ "_id": req.params._id })
-            .then(photos => {
-                res.status(200)
-                res.json(photos)
-            })
-            .catch(error =>
-                res.status(500).json({
-                    error: error.message
-                })
-            )
-    }
-
     const paginatedFilter = (req, res) => {
         const { pageNo, limit, field, order, label } = req.query
         const options = {
@@ -72,33 +59,32 @@ module.exports = (Tags, Photos) => {
                 }
             }
         }, {
-            $pull: {
-                tags: {
-                    tagId: req.params._id
+                $pull: {
+                    tags: {
+                        tagId: req.params._id
+                    }
                 }
-            }
-        })
-        .catch(error =>
-            res.status(500).json({
-                error: error.message
             })
-        )
+            .catch(error =>
+                res.status(500).json({
+                    error: error.message
+                })
+            )
 
         await Tags.findByIdAndRemove(req.params._id)
-        .catch(error =>
-            res.status(500).json({
-                error: error.message
-            })
-        )
-        
+            .catch(error =>
+                res.status(500).json({
+                    error: error.message
+                })
+            )
+
         res.send(204)
     }
-    
+
 
     return {
         individualTag,
         relatedImages,
-        imageFromTag,
         paginatedFilter,
         deleteTag
     }

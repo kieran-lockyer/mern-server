@@ -8,8 +8,6 @@ module.exports = (Tags, Photos) => {
 
   router.get("/:_id", tagsController.individualTag)
 
-  router.get("/image/:_id", tagsController.imageFromTag)
-
   router.get("/related/:tag", tagsController.relatedImages)
 
   router.delete("/:_id", tagsController.deleteTag)

@@ -11,14 +11,6 @@ describe("Tags Routes", () => {
         expect(response.data.length).toEqual(1)
     })
 
-    it("Image From Tag Test", async () => {
-        const response = await axios.get("http://localhost:3001/tags/image/5c459270633c7f0059372e60")
-        expect(response.status).toBe(200)
-        expect(response.data[0]._id).toBe("5c459270633c7f0059372e60")
-        expect(response.data[0].source.type).toBeTruthy
-        expect(response.data.length).toEqual(1)
-    })
-
     it("Related Images Test", async () => {
         const response = await axios.get("http://localhost:3001/tags/related/banana")
         expect(response.status).toBe(200)
