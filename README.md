@@ -1,17 +1,18 @@
 # MERN SERVER
 ### Published App
-https://ca-mern-client.netlify.com/
+  https://ca-mern-client.netlify.com/
 
 ### Github Repos
-Front end: https://github.com/gfrancis13/mern-client
-Back end: https://github.com/kieran-lockyer/mern-server
+  Front end: https://github.com/gfrancis13/mern-client
+
+  Back end: https://github.com/kieran-lockyer/mern-server
 
 ## Problem definition/ purpose:
 We are to create a web application for a Brisbane based client. In this web application we are to use the MERN stack. For our particular product we have found a client called Sortal Management Studio. 
 We have decided to go with this company for many reasons including:
-The technical lead for this company (Ashley Davis) has over 20 years’ experience as a software engineer and from meeting with the team in person was very understanding of our needs and sympathetic to our project and compromises were made on both sides
-The project, technologies and stack both met our requirements of the projects, our skill level as a team, while also challenging us enough to be an opportunity to learn.
-The project also was interesting to all of us.
+  - The technical lead for this company (Ashley Davis) has over 20 years’ experience as a software engineer and from meeting with the team in person was very understanding of our needs and sympathetic to our project and compromises were made on both sides
+  - The project, technologies and stack both met our requirements of the projects, our skill level as a team, while also challenging us enough to be an opportunity to learn.
+  - The project also was interesting to all of us.
 
 Sortal’s requirements were to create a dashboard to present analytics for their machine learning based cloud image storage platform.
 They required being able to view and search all Photos and Tags uploaded to their platform, and to be able to view various statistics and trends around the data for business intelligence purposes.
@@ -19,33 +20,33 @@ They required being able to view and search all Photos and Tags uploaded to thei
 ## Functionality / Features:
 ### Functionality:
 Our application has 3 main functions:
-An Analytics Dashboard that allows the user to view various statistics about Sortals Tag and Photo data.
-A Photos Dashboard that allows a user to view all the Photo data Sortal has and find further information.
-A Tags Dashboard that allows a user to view all the Tag data Sortal has and find further information.
+  - An Analytics Dashboard that allows the user to view various statistics about Sortals Tag and Photo data.
+  - A Photos Dashboard that allows a user to view all the Photo data Sortal has and find further information.
+  - A Tags Dashboard that allows a user to view all the Tag data Sortal has and find further information.
 ### Features:
 #### Dashboard Analytics:
-A bar chart that presents number of photos and tags generated on each day. Option to change the timeframe between 1 Week, 1 Month, 3 Months and 6 Months.
-A card that shows total number of Tags in the database.
-A card that shows total number of  Photos in the database.
-A card that  shows current daily average new Tags per day, measured over last 7 days.
-A card that  shows current daily average new Photos per day, measured over last 7 days.
-A list of the top 5 most popular tags.
-A list of the top 5 trending tags measured over the last 7 days.
+  - A bar chart that presents number of photos and tags generated on each day. Option to change the timeframe between 1 Week, 1 Month, 3 Months and 6 Months.
+  - A card that shows total number of Tags in the database.
+  - A card that shows total number of  Photos in the database.
+  - A card that  shows current daily average new Tags per day, measured over last 7 days.
+  - A card that  shows current daily average new Photos per day, measured over last 7 days.
+  - A list of the top 5 most popular tags.
+  - A list of the top 5 trending tags measured over the last 7 days.
 #### Photos:
-Shows a paginated list of all photos in the database.
-List can be sorted by Date, Confidence and Tags in ascending and descending order.
-A button to switch between table view and grid based gallery view.
-A search bar enables filtering of photos by one or more tags. FIlter view is also sortable.
-Clicking through next and previous pages maintains the sort order.
-Clicking on a photo in the grid gallery presents a lightbox modal to view the full sized image and a list of tags underneath.
-Table view contains an image thumbnail, date added and confidence of the main tag.
+  - Shows a paginated list of all photos in the database.
+  - List can be sorted by Date, Confidence and Tags in ascending and descending order.
+  - A button to switch between table view and grid based gallery view.
+  - A search bar enables filtering of photos by one or more tags. FIlter view is also sortable.
+  - Clicking through next and previous pages maintains the sort order.
+  - Clicking on a photo in the grid gallery presents a lightbox modal to view the full sized image and a list of tags underneath.
+  - Table view contains an image thumbnail, date added and confidence of the main tag.
 #### Tags:
-Shows a paginated list of all tags in the database.
-List can be sorted by Alphabetically, by Date, and by Confidence in ascending and descending order.
-A search bar enables filtering of tags by a name. FIlter view is also sortable.
-Clicking through next and previous pages maintains the sort order.
-Table view contains name of tag, date added, confidence and source type.
-Clicking on a tag shows further info about the tag including the image it’s associated with, the source model and it’s related images.
+  - Shows a paginated list of all tags in the database.
+  - List can be sorted by Alphabetically, by Date, and by Confidence in ascending and descending order.
+  - A search bar enables filtering of tags by a name. FIlter view is also sortable.
+  - Clicking through next and previous pages maintains the sort order.
+  - Table view contains name of tag, date added, confidence and source type.
+  - Clicking on a tag shows further info about the tag including the image it’s associated with, the source model and it’s related images.
 
 ## Screenshots:
 
@@ -54,37 +55,37 @@ Clicking on a tag shows further info about the tag including the image it’s as
 
 ## Instructions on how to setup, configure, deploy and use your App:
 ### Requirements:
-Git
-Node.js
+  - Git
+  - Node.js
 
 ### Client:
-From a bash CLI, git clone the front end repo (Front end: https://github.com/gfrancis13/mern-client).
-Run ‘npm install’ or ‘yarn install’
-Run ‘npm start’ or ‘yarn start’ to start the client on port 3000
+  - From a bash CLI, git clone the front end repo (Front end: https://github.com/gfrancis13/mern-client).
+  - Run ‘npm install’ or ‘yarn install’
+  - Run ‘npm start’ or ‘yarn start’ to start the client on port 3000
 
 ### Server:
-From a bash CLI, git clone the back end repo (Back end: https://github.com/kieran-lockyer/mern-server)
-Run ‘npm install’ or ‘yarn install’
-Create a .env file in the root directory, with variables MLAB_USER and MLAB_PASS set to your MLAB database username and password.
-Change the database url within /db/index.js to your specific MLAB url.
-If you are not using MLAB, configure /db/index.js as instructed by your database host instructions, and change the .env variables as required.
-Run nodemon to start the server on port 3001
+  - From a bash CLI, git clone the back end repo (Back end: https://github.com/kieran-lockyer/mern-server)
+  - Run ‘npm install’ or ‘yarn install’
+  - Create a .env file in the root directory, with variables MLAB_USER and MLAB_PASS set to your MLAB database username and password.
+  - Change the database url within /db/index.js to your specific MLAB url.
+  - If you are not using MLAB, configure /db/index.js as instructed by your database host instructions, and change the .env variables as required.
+  - Run nodemon to start the server on port 3001
 
 ### Deploying:
 #### Deploying with heroku:
-From a bash CLI, run git remote add with the name and link to your chosen deployment platform.
-Run ‘git push “host” master’ to deploy.
+  - From a bash CLI, run git remote add with the name 'heroku' and link to your chosen deployment platform.
+  - Run ‘git push heroku master’ to deploy.
 #### Deploying with Netlify:
-We used Netlify which allows github to link up allowing automatic deployment when a working project is pushed to github project master.
-To implement deployment to Netlify we recommend following this guide. https://www.netlify.com/docs/
+  - We used Netlify to deploy our front end client which allows github to link up allowing automatic deployment when a working project is pushed to github project master.
+  - To implement deployment to Netlify we recommend following this guide. https://www.netlify.com/docs/
 
 ## Technology stack:
 For the technology stack on this project we will be using an assortment of front and back end technologies.
-React/Redux
-Express/Node.js
-MongoDB
-Typescript
-SCSS
+  - React/Redux
+  - Express/Node.js
+  - MongoDB
+  - Typescript
+  - SCSS
 
 ### MongoDB
 We’re using MongoDB to create and store Tag and Photo models, with MLAB integrated as our database host. We are using mongoose to handle the Schemas and querying the database, and mongoose-paginate-v2 to return paginated data.
@@ -107,59 +108,64 @@ With user stories, wireframes, erd finalised, we created a user workflow which h
 
 ## User stories:
 From any page a user can:
-Navigate to the Admin Dashboard
-Navigate to the Photos Dashboard
-Navigate to the Tags Dashboard
-Navigate backwards via breadcrumbs
+  - Navigate to the Admin Dashboard
+  - Navigate to the Photos Dashboard
+  - Navigate to the Tags Dashboard
+  - Navigate backwards via breadcrumbs
 
 From the Admin dashboard a user can view the following analytics panels:
-A graph showing photos and tags activity over time
-Options to change timeframe of the graph
-Total number of photos
-Total number of tags
-Current Average new photos per day
-Current Average new tags per day
-Top 5 most common tags
-Top 5 trending tags
+  - A graph showing photos and tags activity over time
+  - Options to change timeframe of the graph
+  - Total number of photos
+  - Total number of tags
+  - Current Average new photos per day
+  - Current Average new tags per day
+  - Top 5 most common tags
+  - Top 5 trending tags
+  
 From the Photo Dashboard a user can:
-Table View:
-View the entire paginated list of photos with a photo thumbnail, date added, confidence and associated tags.
-Navigate between pages of the paginated list
-Sort by Date in ascending and descending order
-Sort by Confidence level in ascending and descending order
-Sort alphabetically by Tag in ascending and descending order
-Filter photos by one or many tags.
-Click on an image and got to Photo View
-Switch to Grid Gallery view.
-Grid Gallery View:
-View a entire paginated list of photos with a photo thumbnail, and tags in a grid style.
-Navigate between pages of the paginated list
-Sort by Date in ascending and descending order
-Sort by Confidence level in ascending and descending order
-Sort alphabetically by Tag in ascending and descending order
-Filter photos by one or many tags.
-Click on an image to view it in full size and view full list of associated tags.
-Switch to Table view.
+  - Table View:
+    - View the entire paginated list of photos with a photo thumbnail, date added, confidence and associated tags.
+    - Navigate between pages of the paginated list
+    - Sort by Date in ascending and descending order
+    - Sort by Confidence level in ascending and descending order
+    - Sort alphabetically by Tag in ascending and descending order
+    - Filter photos by one or many tags.
+    - Click on an image and got to Photo View
+    - Switch to Grid Gallery view.
+  - Grid Gallery View:
+    - View a entire paginated list of photos with a photo thumbnail, and tags in a grid style.
+    - Navigate between pages of the paginated list
+    - Sort by Date in ascending and descending order
+    - Sort by Confidence level in ascending and descending order
+    - Sort alphabetically by Tag in ascending and descending order
+    - Filter photos by one or many tags.
+    - Click on an image to view it in full size and view full list of associated tags.
+    - Switch to Table view.
+    
 From the Photo View a user can:
-See large version of image
-See date added
-See full list of tags
-See each tags confidence level
-Delete a tag from an image
-Delete the image from the database
+  - See large version of image
+  - See date added
+  - See full list of tags
+  - See each tags confidence level
+  - Delete the image from the database
+  
 From the Tag Dashboard a user can:
-View the entire paginated list of tags with their tag name, date added, source type and confidence level.
-Navigate between pages of the paginated list
-Sort by Date in ascending and descending order
-Sort by Confidence level in ascending and descending order
-Sort alphabetically by Tag in ascending and descending order
-Filter tags by tag name.
-Click on a tag and got to Tag View
+  - View the entire paginated list of tags with their tag name, date added, source type and confidence level.
+  - Navigate between pages of the paginated list
+  - Sort by Date in ascending and descending order
+  - Sort by Confidence level in ascending and descending order
+  - Sort alphabetically by Tag in ascending and descending order
+  - Filter tags by tag name.
+  - Click on a tag and got to Tag View
+
 From the Tag View a user can:
-View full information of the tag, including the image it’s attached to, date added, source type, source model and confidence level.
-View a list of related tags below.
-Delete the tag
-A workflow diagram of the user journey/s:
+  - View full information of the tag, including the image it’s attached to, date added, source type, source model and confidence level.
+  - View a list of related tags below.
+  - Delete the tag, which also removes it from it's associated Photo.
+
+
+## A workflow diagram of the user journey/s:
 
 
 
@@ -271,9 +277,12 @@ Communication with the client
 
 
 ### Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
-Mitch - My knowledge and skills on this project were lacking as I am still trying to get my head around the basics of MERN.
+` - Mitch - My knowledge and skills on this project were lacking as I am still trying to get my head around the basics of MERN.
 In future projects I need to do further my overall understanding with experience by building my own application allowing me to learn and understand all aspects.
-Kieran - Are we supposed to answer this individually or as a group?
+` - Kieran - Coming Soon!
+  - Shubha - Coming Soon!
+  - Glenn - Coming Soon!
+  - Margaret - Coming Soon!
 
 
 
