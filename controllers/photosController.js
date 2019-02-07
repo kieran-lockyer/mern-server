@@ -23,7 +23,7 @@ module.exports = (Tags, Photos) => {
         let filter
         if (req.query.tags) {
             let tags = req.query.tags.split(',').map(tag => {
-                return { tags: { $elemMatch: { label: { $regex: `.*${tag}.*` } } } }
+                return { tags: { $elemMatch: { label: { $regex: `.*${tag}.*`, $options: 'i' } } } }
             })
             filter = { $and: tags }
         }
@@ -40,8 +40,8 @@ module.exports = (Tags, Photos) => {
     }
 
     const deletePhoto = async (req, res) => {
-        await Photos.find({_id: req.params._id})
-            .then( async (photos) => {
+        await Photos.find({ _id: req.params._id })
+            .then(async (photos) => {
                 for (let tag of photos[0].tags) {
                     await Tags.findByIdAndRemove(tag.tagId)
                         .catch(error =>
@@ -56,14 +56,14 @@ module.exports = (Tags, Photos) => {
                     error: error.message
                 })
             )
-        
+
         await Photos.findByIdAndRemove(req.params._id)
             .catch(error =>
                 res.status(500).json({
                     error: error.message
                 })
             )
-        
+
         res.send(204)
     }
 
